@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS chats (
+    id SERIAL PRIMARY KEY,
+    content VARCHAR(255),
+    user_id INTEGER REFERENCES users(id),
+    date TIMESTAMP DEFAULT CURRENT_DATE
+);
